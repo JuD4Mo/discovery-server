@@ -5,5 +5,6 @@ server:
   port: 8761
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: false #Por defecto eureka intenta registrarse en otros servidores pares. Pero al estar en standalone, le indicamos que no lo haga.
+    fetch-registry: false #No necesitamos descargar la lista de servicios de otro servidor. Somos la única fuente de verdad.
+    
